@@ -1,0 +1,10 @@
+.btn-primary {
+  background-color: #52a9ac !important;
+  border-color: #52a9ac !important; }
+
+.btn-primary:hover {
+  border-color: #52a9ac !important;
+  background-color: #fff !important;
+  color: #52a9ac !important;
+}
+/*# sourceMappingURL=custom.css.map */

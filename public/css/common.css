@@ -1,0 +1,124 @@
+:root {
+  --bs-link-color: #000 !important;
+}
+
+.txt-primary {
+  font-weight: 400;
+  font-size: 25px;
+  color: #52a9ac !important;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 7vh;
+}
+
+.nav-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.navbar-logo {
+  max-width: 100px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #52a9ac;
+  font-size: 18px;
+  font-weight: thin;
+  margin-top: 5px;
+}
+
+.form-ttl {
+  font-size: 30px;
+}
+
+.form-main-btn {
+  margin-right: 10%;
+}
+
+.dropdown-btn {
+  margin-top: -10px;
+}
+
+.nav-item1 {
+  margin-top: -4px;
+}
+
+.nav-item2 {
+  margin-top: -8px;
+}
+
+.login-btn {
+  width: 100%;
+}
+
+.forget-btn {
+  text-decoration: none;
+}
+
+.register-link {
+  text-decoration: none;
+}
+
+.change-psw-btn {
+  border-color: #52a9ac !important;
+  background-color: #fff !important;
+  color: #52a9ac !important;
+}
+
+.change-psw-btn:hover {
+  background-color: #52a9ac !important ;
+  border-color: #52a9ac !important ;
+  color: #fff !important;
+}
+
+.cancel-btn {
+
+}
+
+.cancel-btn:hover {
+
+}
+
+.user-name {
+  text-decoration: none;
+  color: #000;
+}
+
+#users-table th, td {
+  text-align: center;
+}
+
+.active>.page-link, .page-link.active {
+  background-color: #52a9ac !important ;
+  border-color: #52a9ac !important ;
+}
+
+.prev-icon {
+  font-size: 12px;
+}
+
+.next-icon {
+  font-size: 12px;
+}
+
+#users-table_length select,
+#users-table_filter select {
+  margin-bottom: 20px;
+}
+
+#users-table_info,
+#users-table_paginate {
+    margin-top: 20px;
+}
