@@ -3,6 +3,7 @@
 use App\Http\Middleware\AuthRoutes;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SocialController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
@@ -20,6 +21,9 @@ use App\Http\Controllers\ForgotPasswordController;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
+Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
 
 Route::middleware(['visitor'])->group(function () {
     Route::get('/register', [RegisterController::class, 'registerForm'])->name('auth.register');
@@ -50,7 +54,6 @@ Route::middleware(['auth'])->group(function () {
             Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
             Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
          });
-
 
     Route::middleware(['auth', 'changePasswordPermission'])->group(function () {
         Route::get('/users/{user}/edit-password', [UserController::class, 'editPassword'])->name('users.edit-password');

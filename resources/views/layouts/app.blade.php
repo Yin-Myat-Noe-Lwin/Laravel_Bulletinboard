@@ -20,15 +20,15 @@
             <li class="nav-item">
                 @auth
                 @if(auth()->check() && auth()->user()->role === 'admin')
-                    <li class="nav-item nav-item1">
+                    <li class="nav-item nav-item1 me-4">
                         <a href="{{ route('users.index') }}" class="nav-link">User List</a>
                     </li>
                 @endif
-                <div class="dropdown px-4 dropdown-btn">
+                <div class="dropdown dropdown-btn me-4">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{auth()->user()->name}}
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="{{route('users.show', auth()->user()->id)}}">Profile</a></li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">

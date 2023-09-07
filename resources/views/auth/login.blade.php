@@ -29,7 +29,15 @@
               @enderror
             </div>
             <p><a href="{{ route('auth.forgot') }}" class="forget-btn">Forgot?</a></p>
-            <button class="btn btn-primary login-btn">Login</button>
+            <button class="btn btn-primary login-btn mb-3">Login</button>
+            <div class='mt-4 mb-3 d-flex align-items-center'>
+                <div class='custom-line'></div>
+                <p class='border mb-0 or-info border-default rounded d-inline-block px-2 py-1 text-black-50'>OR</p>
+                <div class="custom-line"></div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <a href="{{ url('auth/facebook') }}"><i class="fa-brands fa-facebook login-icon"></i></a>
+            </div>
           </form>
           <p class="text-center pt-3">Not a member?<a href="{{ route('auth.register') }}" class="register-link">Sign up</a></p>
         </div>
